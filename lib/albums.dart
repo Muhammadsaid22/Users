@@ -13,7 +13,7 @@ class Albums extends StatefulWidget {
 class _AlbumsState extends State<Albums> {
   bool favorite = true;
   List<dynamic> avatar = [
-    "assets/avataaars(10).png",
+
     "assets/avataaars(1).png",
     "assets/avataaars(2).png",
     "assets/avataaars(3).png",
@@ -23,6 +23,7 @@ class _AlbumsState extends State<Albums> {
     "assets/avataaars(7).png",
     "assets/avataaars(8).png",
     "assets/avataaars(9).png",
+    "assets/avataaars(10).png",
   ];
   List<dynamic> newslist =[];
   bool isLoading = true;
