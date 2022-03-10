@@ -52,7 +52,10 @@ class _AlbumsState extends State<Albums> {
         ),
         ),
       ),
-      body: isLoading?Center(child: CircularProgressIndicator()):Container(
+      body: isLoading?Center(
+          child: CircularProgressIndicator())
+          :Container(
+        color: Colors.blueGrey[800],
         height: double.infinity,
         padding: EdgeInsets.all(8),
         child: ListView.builder(
@@ -62,7 +65,15 @@ class _AlbumsState extends State<Albums> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => Info(newslist[index]['id'],avatar[newslist[index]["id"]-1])
+                      builder: (context) => Info
+                        (
+                        id: newslist[index]['id'],
+                        item: avatar[newslist[index]["id"]-1],
+                        name: '${newslist[index]["username"]}',
+                        phone: newslist[index]["phone"],
+                        email: '${newslist[index]["email"]}',
+                        address: '${newslist[index]["address"]["street"]}',
+                      )
                   ),
                 );
               },
