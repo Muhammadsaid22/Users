@@ -1,11 +1,11 @@
 import 'dart:core';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:users/user_cubit.dart';
-import 'info.dart';
+import 'package:users/cubit/user/user_cubit.dart';
+import '../posts/posts_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class Albums extends StatelessWidget {
+class UserScreen extends StatelessWidget {
   List<dynamic> avatar = [
     "assets/avataaars(1).png",
     "assets/avataaars(2).png",
@@ -48,13 +48,9 @@ class Albums extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (context) => Info(
-                                    id: state.userslist[index].id,
-                                    item: avatar[state.userslist[index].id - 1],
-                                    name: '${state.userslist[index].username}',
-                                    phone: state.userslist[index].phone,
-                                    email: '${state.userslist[index].email}',
-                                    address:
-                                        '${state.userslist[index].address.street}',
+                                avatar[state.userslist[index].id - 1],
+                                state.userslist[index].id,
+                                state.userslist[index].username,
                                   )),
                         );
                       },

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:users/albums.dart';
-
-import 'Users.dart';
-
+import 'package:users/cubit/user/user_screen.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -13,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: Albums()
+      home: UserScreen()
     );
   }
 }
